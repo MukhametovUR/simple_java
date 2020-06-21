@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
-public class CientWindow extends JFrame implements ActionListener, TCPConnectionListener {
+public class ClientWindow extends JFrame implements ActionListener, TCPConnectionListener {
 
     private static final String IP_ADDR ="127.0.0.1";
     private static final int PORT =8189;
@@ -21,7 +21,7 @@ public class CientWindow extends JFrame implements ActionListener, TCPConnection
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new CientWindow();
+                new ClientWindow();
             }
         });
     }
@@ -31,7 +31,7 @@ public class CientWindow extends JFrame implements ActionListener, TCPConnection
     private final JTextField fieldInput = new JTextField();
     private TCPConnection connection;
 
-    private CientWindow(){
+    private ClientWindow(){
       setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//Кнопка закрытия
         setSize(WIDTH,HEIGTH);//Размерность окна
       setLocationRelativeTo(null);//Окно по середине
